@@ -1,0 +1,26 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.8.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'rx.java.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compile 'io.reactivex.rxjava2:rxjava:2.2.12'
+	//compile 'io.reactivex:rxjava-async-util:0.21.0'
+	// https://mvnrepository.com/artifact/org.reactivestreams/reactive-streams
+	compile group: 'org.reactivestreams', name: 'reactive-streams', version: '1.0.3'
+	//compile group: 'io.reactivex.rxjava2', name: 'rxjava', version: '2.2.12'
+	// https://mvnrepository.com/artifact/io.reactivex/rxjava-async-util
+	//compile group: 'io.reactivex', name: 'rxjava-async-util', version: '0.21.0'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
